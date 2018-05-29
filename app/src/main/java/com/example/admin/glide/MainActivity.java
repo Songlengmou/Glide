@@ -68,3 +68,150 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+
+/**
+ * 地址:https://blog.csdn.net/u011179438/article/details/52367903
+ * <p>
+ * 常用功能：
+ * //占位符
+ * Glide.with(this).load(url).placeholder(R.mipmap.ic_launcher).into(imageview);
+ * //错误占位符
+ * Glide.with(this).load(url).error(R.mipmap.ic_launcher).into(imageview);
+ * //强制显示淡入淡出功能,300表示动画时间300ms
+ * Glide.with(this).load(url).crossFade(300).into(imageview);
+ * //不要淡入淡出效果
+ * Glide.with(this).load(url).dontAnimate().into(imageview);
+ * //改变图片大小,单位是pixel
+ * Glide.with(this).load(url).override(500,500).into(imageview);
+ * //Glide可以直接显示Gif
+ * Glide.with(this).load(gif_url).into(imageview);
+ * //也可以只显示Glide的第一帧作为普通图片使用
+ * Glide.with(this).load(gif_url).asBitmap().into(imageview);
+ * //也可以强制显示Gif,如果目标url不是gif则调用error()方法
+ * Glide.with(this).load(gif_url).asGif().into(imageview);
+ * //还可以显示视频，但目前只支持本地视频
+ * Glide.with(this).load(Uri.fromFile(new File(local_video_path))).into(imageview);
+ * <p>
+ * 高级功能:
+ * //跳过内存缓存，只在磁盘缓存(默认false)
+ * Glide.with(this).load(url).skipMemoryCacge(true).into(imageview);
+ * //跳过磁盘缓存，只在内存缓存（NONE表示什么都不缓存）
+ * Glide.with(this).load(url).diskCacheStrategy(DiskCacheStrategy.NONE).into(imageview);
+ * //显示缩略图（显示原始图像的10%）
+ * Glide.with(this).load(url).thumbnail(0.1f).into(imageview);
+ * <p>
+ * 高级功能:
+ * //跳过内存缓存，只在磁盘缓存(默认false)
+ * Glide.with(this).load(url).skipMemoryCacge(true).into(imageview);
+ * //跳过磁盘缓存，只在内存缓存（NONE表示什么都不缓存）
+ * Glide.with(this).load(url).diskCacheStrategy(DiskCacheStrategy.NONE).into(imageview);
+ * //显示缩略图（显示原始图像的10%）
+ * Glide.with(this).load(url).thumbnail(0.1f).into(imageview);
+ * <p>
+ * <p>
+ * <p>
+ * 下载bitmap:
+ * <p>
+ * private SimpleTarget<GlideDrawable> mTarget = new SimpleTarget<GlideDrawable>() {
+ *
+ * @Override public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> glideAnimation) {
+ * //处理resource
+ * }
+ * };
+ * <p>
+ * private void loadFile(){
+ * Glide.with(this).load("url").into(mTarget);
+ * }
+ * <p>
+ * 高级功能:
+ * //跳过内存缓存，只在磁盘缓存(默认false)
+ * Glide.with(this).load(url).skipMemoryCacge(true).into(imageview);
+ * //跳过磁盘缓存，只在内存缓存（NONE表示什么都不缓存）
+ * Glide.with(this).load(url).diskCacheStrategy(DiskCacheStrategy.NONE).into(imageview);
+ * //显示缩略图（显示原始图像的10%）
+ * Glide.with(this).load(url).thumbnail(0.1f).into(imageview);
+ * <p>
+ * <p>
+ * <p>
+ * 下载bitmap:
+ * <p>
+ * private SimpleTarget<GlideDrawable> mTarget = new SimpleTarget<GlideDrawable>() {
+ * @Override public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> glideAnimation) {
+ * //处理resource
+ * }
+ * };
+ * <p>
+ * private void loadFile(){
+ * Glide.with(this).load("url").into(mTarget);
+ * }
+ * <p>
+ * 高级功能:
+ * //跳过内存缓存，只在磁盘缓存(默认false)
+ * Glide.with(this).load(url).skipMemoryCacge(true).into(imageview);
+ * //跳过磁盘缓存，只在内存缓存（NONE表示什么都不缓存）
+ * Glide.with(this).load(url).diskCacheStrategy(DiskCacheStrategy.NONE).into(imageview);
+ * //显示缩略图（显示原始图像的10%）
+ * Glide.with(this).load(url).thumbnail(0.1f).into(imageview);
+ * <p>
+ * <p>
+ * <p>
+ * 下载bitmap:
+ * <p>
+ * private SimpleTarget<GlideDrawable> mTarget = new SimpleTarget<GlideDrawable>() {
+ * @Override public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> glideAnimation) {
+ * //处理resource
+ * }
+ * };
+ * <p>
+ * private void loadFile(){
+ * Glide.with(this).load("url").into(mTarget);
+ * }
+ * <p>
+ * 高级功能:
+ * //跳过内存缓存，只在磁盘缓存(默认false)
+ * Glide.with(this).load(url).skipMemoryCacge(true).into(imageview);
+ * //跳过磁盘缓存，只在内存缓存（NONE表示什么都不缓存）
+ * Glide.with(this).load(url).diskCacheStrategy(DiskCacheStrategy.NONE).into(imageview);
+ * //显示缩略图（显示原始图像的10%）
+ * Glide.with(this).load(url).thumbnail(0.1f).into(imageview);
+ * <p>
+ * <p>
+ * <p>
+ * 下载bitmap:
+ * <p>
+ * private SimpleTarget<GlideDrawable> mTarget = new SimpleTarget<GlideDrawable>() {
+ * @Override public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> glideAnimation) {
+ * //处理resource
+ * }
+ * };
+ * <p>
+ * private void loadFile(){
+ * Glide.with(this).load("url").into(mTarget);
+ * }
+ */
+
+/**
+ * 高级功能:
+ * //跳过内存缓存，只在磁盘缓存(默认false)
+ Glide.with(this).load(url).skipMemoryCacge(true).into(imageview);
+ //跳过磁盘缓存，只在内存缓存（NONE表示什么都不缓存）
+ Glide.with(this).load(url).diskCacheStrategy(DiskCacheStrategy.NONE).into(imageview);
+ //显示缩略图（显示原始图像的10%）
+ Glide.with(this).load(url).thumbnail(0.1f).into(imageview);
+ *
+ */
+
+/**
+ *
+ * 下载bitmap:
+ *
+ * private SimpleTarget<GlideDrawable> mTarget = new SimpleTarget<GlideDrawable>() {
+@Override public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> glideAnimation) {
+//处理resource
+}
+};
+
+ private void loadFile(){
+ Glide.with(this).load("url").into(mTarget);
+ }
+ */
